@@ -18,18 +18,19 @@ function is_prim(n)
 function calculeaza_prime(start_value)
 {	if(stopped)
 	;
-	else
+		else
 	{
-	for (var i = start_value; i < startvalue + 1000; i++)
-	{
-		if(is_prim(i))
-			postMessage(i);
-	startvalue += 1000;
-	}
+		for (var i = start_value; i < startvalue + 1000; i++)
+		{
+			if(is_prim(i))
+				postMessage(i);
+			
+			startvalue += 1000;
+		}
 	if(start_value < 1e10)
 	setTimeout(calculeaza_prime, 1, start_value);
 else
 	postMessage("gata");
 }
 }
-calculeaza_prime(1e9);
+calculeaza_prime(100000000);
